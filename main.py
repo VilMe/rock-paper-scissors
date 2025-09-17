@@ -12,9 +12,24 @@ class RPS:          #creating a class because we need to define some state
 
 
     def play_game(self):
-        ...
+        user_move: stf = input('Rock, paper, or scissors? >>').lower() # 
+        
+        if user_move == 'exit':
+            print('Thanks for playing, playa, lates!')
+            sys.exit()
 
-    def display_move(self):
+        if user_move not in self.valid_moves:
+            print('Invalid move...')
+            return self.play_game()
+        
+        ai_move: str = random.choice(self.valid_moves)
+
+
+        self.display_moves(user_move, ai_move)
+        self.check_move(user_move, ai_move)
+        
+
+    def display_moves(self):
         ...
 
     def check_move(self):
