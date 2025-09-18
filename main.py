@@ -46,3 +46,12 @@ class RPS:          #creating a class because we need to define some state
             print('You win! one for the huamans!')
         else: 
             print('AI wins...the machines are taking over, I\'ve seen this movie before! RUN!')
+
+
+
+
+if __name__ == '__main__':
+    rps = RPS()
+
+    while True:
+        rps.play_game()
