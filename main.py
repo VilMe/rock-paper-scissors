@@ -33,6 +33,7 @@ class RPS:          #creating a class because we need to define some state
         print('-----') # divider to show when user inputs move
         print(f'You: {self.moves[user_move]}')
         print(f'AI: {self.moves[ai_move]}')
+        print('-----')
 
     def check_move(self):
         ...
