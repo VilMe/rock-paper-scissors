@@ -35,5 +35,14 @@ class RPS:          #creating a class because we need to define some state
         print(f'AI: {self.moves[ai_move]}')
         print('-----')
 
-    def check_move(self):
-        ...
+    def check_move(self, user_move: str, ai_move: str):
+        if user_move == ai_move:
+            print('It\'s a tie! Play again??')
+        elif user_move == 'rock' and ai_move == 'scissors':
+            print('You win! one for the huamans!')
+        elif user_move == 'scissors' and ai_move == 'paper':
+            print('You win! one for the huamans!')
+        elif user_move == 'paper' and ai_move == 'rock':
+            print('You win! one for the huamans!')
+        else: 
+            print('AI wins...the machines are taking over, I\'ve seen this movie before! RUN!')
