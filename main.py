@@ -12,7 +12,7 @@ class RPS:          #creating a class because we need to define some state
 
 
     def play_game(self):
-        user_move: stf = input('Rock, paper, or scissors? >>').lower() # 
+        user_move: str = input('Rock, paper, or scissors? >>').lower() # 
         
         if user_move == 'exit':
             print('Thanks for playing, playa, lates!')
