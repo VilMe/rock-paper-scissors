@@ -19,6 +19,12 @@ class RPS:          #creating a class because we need to define some state
 
         if user_move == 'exit':
             print('Thanks for playing, playa, lates!')
+            if self.user_score > self.ai_score:
+                print("Humans win, we are more than batteries still!")
+            elif self.ai_score > self.user_score:
+                print("The machines have won, I for one welcome our AI overlords!")
+            else:
+                print("We're tied, we'll set this one day Machines!!")
             sys.exit()
 
         if user_move not in self.valid_moves:
