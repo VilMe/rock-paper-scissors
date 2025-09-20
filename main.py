@@ -11,9 +11,12 @@ class RPS:          #creating a class because we need to define some state
         self.valid_moves: list[str] = list(self.moves.keys())
 
 
+        self.user_score: int = 0
+        self.ai_score: int = 0   
     def play_game(self):
         user_move: str = input('Rock, paper, or scissors? >>').lower() 
-        
+
+
         if user_move == 'exit':
             print('Thanks for playing, playa, lates!')
             sys.exit()
@@ -36,32 +39,32 @@ class RPS:          #creating a class because we need to define some state
         print('-----')
 
     def check_move(self, user_move: str, ai_move: str):
-        user_score: int = 0
-        ai_score: int = 0
+
+
         if user_move == ai_move:
             print('It\'s a tie! Play again??')
-            print(f'Human score: {user_score}')
-            print(f'Machines score: {ai_score}')
+            print(f'Human score: {self.user_score}')
+            print(f'Machines score: {self.ai_score}')
         elif user_move == 'rock' and ai_move == 'scissors':
-            user_score += 1
+            self.user_score += 1
             print('You win! one for the huamans!')
-            print(f'Human score: {user_score}')
-            print(f'Machines score: {ai_score}')
+            print(f'Human score: {self.user_score}')
+            print(f'Machines score: {self.ai_score}')
         elif user_move == 'scissors' and ai_move == 'paper':
-            user_score += 1
+            self.user_score += 1
             print('You win! one for the huamans!')
-            print(f'Human score: {user_score}')
-            print(f'Machines score: {ai_score}')
+            print(f'Human score: {self.user_score}')
+            print(f'Machines score: {self.ai_score}')
         elif user_move == 'paper' and ai_move == 'rock':
-            user_score += 1
+            self.user_score += 1
             print('You win! one for the huamans!')
-            print(f'Human score: {user_score}')
-            print(f'Machines score: {ai_score}')
+            print(f'Human score: {self.user_score}')
+            print(f'Machines score: {self.ai_score}')
         else: 
-            ai_score += 1
+            self.ai_score += 1
             print('AI wins...the machines are taking over, I\'ve seen this movie before! RUN!')
-            print(f'Human score: {user_score}')
-            print(f'Machines score: {ai_score}')
+            print(f'Human score: {self.user_score}')
+            print(f'Machines score: {self.ai_score}')
 
 
 
